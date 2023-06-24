@@ -31,19 +31,19 @@ Obs. CSRF is currently disabled for the sake of testing.
 
 ## Collections
 ### Tasks
-``GET /api/tasks`` - Gets all tasks
+``GET /api/tasks`` - Gets all tasks <br>
 ``POST /api/tasks`` - Creates Task
 - name (required)
 - description (min:8|required)
 - deadline (date|required)
 
-``GET /api/tasks/{id}`` - Gets specified task (acts as filter)
+``GET /api/tasks/{id}`` - Gets specified task (acts as filter) <br>
 ``PATCH /api/tasks/{id}`` - Alters Task
 - name (required)
 - description (min:8|required)
 - deadline (date|required)
 
-``PATCH /api/tasks/finish/{id}`` - Finishes Task
+``PATCH /api/tasks/finish/{id}`` - Finishes Task <br>
 ``DELETE /api/tasks/{id}`` - Deletes Task
 
 ## Troubleshooting
