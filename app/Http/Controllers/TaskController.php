@@ -73,6 +73,9 @@ class TaskController extends Controller
             'deadline' => 'required|date',
         ]);
 
+        /**
+         * @TODO 1 turn this into a gate to verify if user is authorized to update or delete task.
+         */
         if ($request->user()->id != $task->user_id) {
             return response()->json(['message' => 'Not owner of the task'], 401);
         }
@@ -89,6 +92,9 @@ class TaskController extends Controller
     public function finish(Task $task)
     {
 
+        /**
+         * @TODO 1 turn this into a gate to verify if user is authorized to update or delete task.
+         */
         if (Auth::user()->id != $task->user_id) {
             return response()->json(['message' => 'Not owner of the task'], 401);
         }
@@ -112,6 +118,9 @@ class TaskController extends Controller
 
         $task = Task::find($task->id);
 
+        /**
+         * @TODO 1 turn this into a gate to verify if user is authorized to update or delete task.
+         */
         if (Auth::user()->id != $task->user_id) {
             return response()->json(['message' => 'Not owner of the task'], 401);
         }
