@@ -52,3 +52,5 @@ In case sanctum is not working execute ``php artisan vendor:publish --provider="
 
 Don't forget to add a header for ``Accept application/json`` in postman in case the requests are failing.
 Also, don't forget to add type Bearer token authorization and insert the text gotten from ``/tokens/create``
+
+Also, in case nothing works. run ``php artisan key:generate``
